@@ -11,168 +11,106 @@
       <link rel="stylesheet" href="styles.css" />
       <title>Jakub Frątczak - Portfolio</title>
    </head>
-   <body class="light" id="top">
-      <header class="header center">
-         <h3>
-            <a href="https://github.com/Froncu/portfolio" class="link">JF.</a>
-         </h3>
-
-         <nav class="nav center">
-            <ul class="nav__list center">
-               <li class="nav__list-item">
-                  <a class="link link--nav" href="#projects">Projects</a>
-               </li>
-               <li class="nav__list-item">
-                  <a class="link link--nav" href="#skills">Skills</a>
-               </li>
-               <li class="nav__list-item">
-                  <a class="link link--nav" href="#contact">Contact</a>
-               </li>
-            </ul>
-
-            <button type="button" aria-label="toggle theme" class="btn btn--icon">
-               <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-            </button>
-
-            <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
-               <i aria-hidden="true" class="fas fa-bars"></i>
-            </button>
-         </nav>
-      </header>
+   <body id="top">
+      <nav>
+         <a class="link" href="#introduction">introduction</a>
+         <a class="link" href="#about">about</a>
+         <a class="link" href="#projects">projects</a>
+      </nav>
 
       <main>
-         <!-- About -->
-         <div class="about ">
-            <h1>Hi, I am <span class="about__name">Jakub Frątczak.</span></h1>
-            <h2 class="about__role">A C++ developer.</h2>
-            <p class="about__desc">
-               Welcome to my portfolio website! I'm a heavy <strong>C++</strong> enthusiast with a passion for creating
-               <strong>efficient, high-performance applications</strong> with a <strong>clean API</strong>. I primarily enjoy
-               dabbling in <strong>engine, graphics and embedded systems</strong> programming.
-            </p>
-
-            <div class="about__contact center">
-               <a href="https://example.com">
-                  <span class="btn btn--outline">Resume</span>
-               </a>
-
-               <a href="https://github.com/rjshkhr" aria-label="github" class="link link--icon">
-                  <i aria-hidden="true" class="fab fa-github"></i>
-               </a>
-
-               <a href="https://linkedin.com/in/rjshkhr" aria-label="linkedin" class="link link--icon">
-                  <i aria-hidden="true" class="fab fa-linkedin"></i>
-               </a>
+         <section id="introduction" class="introduction">
+            <div class="section-content">
+               <h1>Hi, I'm <span class="highlight">Jakub Frątczak</span>,</h1>
+               <h2 style="text-align: right">and I'm a <span class="highlight">C++</span> developer.</h2>
+               <br />
+               <br />
+               <h3 style="text-align: center">Welcome to my portfolio website!</h3>
             </div>
-         </div>
+         </section>
 
-         <!-- Projects -->
-         <section id="projects" class="section projects">
-            <h2 class="section__title">Projects</h2>
+         <section id="about">
+            <div class="section-content">
+               <h2 class="section-title">About</h2>
+               <div class="split">
+                  <div>
+                     <div class="social-links">
+                        <a class="link" href="https://github.com/froncu">
+                           <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a class="link" href="https://linkedin.com/in/froncu">
+                           <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a class="link" href="https://discord.com/users/315174935943446540">
+                           <i class="fab fa-discord fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a class="link" href="https://www.instagram.com/yungfroncu/">
+                           <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a class="link" href="https://www.facebook.com/yungfroncu/">
+                           <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+                        </a>
+                        <a class="link" href="https://x.com/froncu_">
+                           <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                        </a>
+                     </div>
+                     <img src="hero.png" alt="Profile picture of Jakub Frątczak" />
+                     <a class="button" href="curriculum_vitae.pdf">Curriculum Vitae</a>
+                  </div>
 
-            <div class="projects__grid">
-               <div class="project">
-                  <h3>Project 1</h3>
-                  <p class="project__description">
-                     Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo sapiente debitis labore sed ipsam Mollitia
-                     repellat illum quod unde beatae Quis
-                  </p>
-                  <ul class="project__stack">
-                     <li class="project__stack-item">SASS</li>
-                     <li class="project__stack-item">TypeScript</li>
-                     <li class="project__stack-item">React</li>
-                  </ul>
-
-                  <a href="https://github.com" aria-label="source code" class="link link--icon">
-                     <i aria-hidden="true" class="fab fa-github"></i>
-                  </a>
-                  <a href="https://example.com" aria-label="live preview" class="link link--icon">
-                     <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-                  </a>
-               </div>
-
-               <div class="project">
-                  <h3>Project 2</h3>
-                  <p class="project__description">
-                     Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo sapiente debitis labore sed ipsam Mollitia
-                     repellat illum quod unde beatae Quis
-                  </p>
-                  <ul class="project__stack">
-                     <li class="project__stack-item">SASS</li>
-                     <li class="project__stack-item">TypeScript</li>
-                     <li class="project__stack-item">React</li>
-                  </ul>
-
-                  <a href="https://github.com" aria-label="source code" class="link link--icon">
-                     <i aria-hidden="true" class="fab fa-github"></i>
-                  </a>
-                  <a href="https://example.com" aria-label="live preview" class="link link--icon">
-                     <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-                  </a>
-               </div>
-
-               <div class="project">
-                  <h3>Project 3</h3>
-                  <p class="project__description">
-                     Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo sapiente debitis labore sed ipsam Mollitia
-                     repellat illum quod unde beatae Quis
-                  </p>
-                  <ul class="project__stack">
-                     <li class="project__stack-item">SASS</li>
-                     <li class="project__stack-item">TypeScript</li>
-                     <li class="project__stack-item">React</li>
-                  </ul>
-
-                  <a href="https://github.com" aria-label="source code" class="link link--icon">
-                     <i aria-hidden="true" class="fab fa-github"></i>
-                  </a>
-                  <a href="https://example.com" aria-label="live preview" class="link link--icon">
-                     <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-                  </a>
+                  <div>
+                     <p>
+                        During my final years of high school, I wasn't sure what career path to pursue. My interests in
+                        mathematics, physics, computers, and games naturally led me to explore <b>game development</b>.
+                        <br />
+                        <br />
+                        I began studying at <a class="link" href="https://digitalartsandentertainment.be/"><b>DAE</b></a
+                        >, where I discovered programming for the first time. We started with <b>C++</b>, and I was instantly
+                        hooked.
+                        <br />
+                        <br />
+                        Since then, I've become a passionate <b>C++ developer</b> focused on building
+                        <b>high-performance applications</b> with a <b>clean API</b> and <b>modern C++ features</b>. I
+                        especially enjoy <b>engine</b>, <b>graphics</b>, and <b>embedded systems programming</b>.
+                        <br />
+                        <br />
+                        Born and raised in Belgium with <b>Polish roots</b>, my long-term goal is to <b>return to Poland</b> and
+                        continue my career there.
+                        <br />
+                        <br />
+                        Outside of programming, I value a <b>healthy lifestyle</b>. I practiced <b>judo</b> for eight years,
+                        earning the <b>Belgian U21 +100 kg title</b> in 2022, and I enjoy <b>weightlifting</b> in my free time.
+                     </p>
+                  </div>
                </div>
             </div>
          </section>
 
-         <!-- Skills -->
-         <section class="section skills" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <ul class="skills__list">
-               <li class="skills__list-item btn btn--plain">HTML</li>
-               <li class="skills__list-item btn btn--plain">CSS</li>
-               <li class="skills__list-item btn btn--plain">SCSS</li>
-               <li class="skills__list-item btn btn--plain">JavaScript</li>
-               <li class="skills__list-item btn btn--plain">TypeScript</li>
-               <li class="skills__list-item btn btn--plain">React</li>
-               <li class="skills__list-item btn btn--plain">Redux</li>
-               <li class="skills__list-item btn btn--plain">Git</li>
-               <li class="skills__list-item btn btn--plain">Material UI</li>
-               <li class="skills__list-item btn btn--plain">Jest</li>
-               <li class="skills__list-item btn btn--plain">Enzyme</li>
-               <li class="skills__list-item btn btn--plain">CI/CD</li>
-            </ul>
-         </section>
-
-         <!-- Contact -->
-         <section class="section contact center" id="contact">
-            <h2 class="section__title">Contact</h2>
-            <a href="mailto:rjshekhar.official@gmail.com">
-               <span class="btn btn--outline">Email me</span>
-            </a>
+         <section id="projects">
+            <div class="section-content">
+               <h2 class="section-title">Projects</h2>
+               <div class="projects-grid" id="projectsGrid"></div>
+            </div>
          </section>
       </main>
 
-      <footer class="footer">
-         <a href="https://github.com/rjshkhr/cleanfolio-minimal" class="link footer__link"> Created By Raj Shekhar </a>
-      </footer>
-
-      <div class="scroll-container">
-         <div class="scroll-top">
-            <a aria-label="Scroll up" href="#top">
-               <i aria-hidden="true" class="fas fa-arrow-up"></i>
-            </a>
+      <div class="modal" id="projectModal">
+         <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+               <img class="modal-image" id="modalImage" src="" alt="" />
+               <div class="modal-info">
+                  <h2 id="modalTitle"></h2>
+                  <div class="modal-tags" id="modalTags"></div>
+                  <p id="description"></p>
+                  <div class="modal-links">
+                     <a class="button" id="modalLink" href="" target="_blank" rel="noopener noreferrer">check it out</a>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
 
-      <script src="./script.js"></script>
+      <script src="script.js"></script>
    </body>
 </html>

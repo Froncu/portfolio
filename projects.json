@@ -1,0 +1,102 @@
+[
+   {
+      "title": "Fronge",
+      "thumbnail": "fronge.png",
+      "description": "A modern 2D game engine written in C++23, built entirely from scratch as a solo learning project. Features a custom Entity-Component-System (ECS) architecture based on sparse set data structures for optimal cache efficiency, an integrated physics system designed to work seamlessly with the ECS, and a flexible input system that routes keyboard and gamepad inputs to per-user controllers with dynamic device assignment. Includes thread-safe logging, smart references that automatically update when objects are moved, and an event system for decoupling components. Built with modern C++ features and a philosophy of learning by building, with minimal dependencies wrapped behind clean engine-specific interfaces.",
+      "tags": [
+         "CMake",
+         "Entity Component System",
+         "2D Game Engine",
+         "2D Physics",
+         "C++ 23",
+         "SDL3",
+         "SDL3 Mixer",
+         "SDL3 Image",
+         "SDL3 TTF",
+         "ImGui"
+      ],
+      "link": "https://github.com/Froncu/Fronge"
+   },
+   {
+      "title": "Eruptor",
+      "thumbnail": "eruptor.png",
+      "description": "A physically based rendering (PBR) engine built in C++20 using modern Vulkan practices and the Vulkan-Hpp C++ bindings. Features a deferred rendering pipeline with depth pre-pass and G-Buffer setup for efficient lighting computed in HDR space with tone-mapping. Implements automatic exposure adjustment using compute shaders and histogram-based eye adaptation techniques. The project explores basic graphics programming concepts including RAII-oriented design patterns for safe resource management, builder patterns for clean configuration, dynamic rendering without traditional render passes, bindless rendering for shader resource access, and explicit fine-grained synchronization with Synchronization2. Showcases proficiency in modern graphics APIs, shader programming, and real-time rendering optimization techniques.",
+      "tags": [
+         "CMake",
+         "Vulkan",
+         "assimp",
+         "Graphics Programming",
+         "GLM",
+         "spdlog",
+         "C++ 20",
+         "VulkanHPP",
+         "SDL3 Image"
+      ],
+      "link": "https://github.com/Froncu/Eruptor"
+   },
+   {
+      "title": "Shovel Knight: Shovel of Hope - Remake",
+      "thumbnail": "shovel_knight.png",
+      "description": "An almost complete remake of the first level of Shovel Knight: Shovel of Hope, created as the final assignment for the Programming 2 course at Howest - Digital Arts and Entertainment. This first major game project demonstrates the application of foundational C++ programming skills by faithfully recreating the original level's gameplay mechanics, including the shovel blade combat system, pogo jumping, destructible terrain, enemy AI, moving platforms and checkpoint system. Originally completed in June 2023 and later migrated from Visual Studio Solutions to a modern CMake/vcpkg build system. Built using SDL2 for core functionality, graphics, input handling, and audio.",
+      "tags": [
+         "CMake",
+         "SDL2",
+         "C++ 14",
+         "Game Development",
+         "Remake",
+         "SDL2 Mixer",
+         "SDL2 TTF",
+         "SDL2 Image",
+         "Shovel Knight"
+      ],
+      "link": "https://github.com/Froncu/ShovelOfHopeRemake"
+   },
+   {
+      "title": "NESlides",
+      "thumbnail": "neslides.png",
+      "description": "An interactive NES homebrew presentation written in pure 6502 Assembly language for the Nintendo Entertainment System. This collaborative project transforms the NES into an interactive presentation system where users can navigate between slides and shoot tiles off the screen, demonstrating mastery of low-level programming, NES hardware architecture, and 6502 instruction set. The project includes a companion editor (NESlidesEditor) for creating custom presentations. Showcases understanding of PPU (Picture Processing Unit) operations, memory-mapped I/O, sprite handling, input processing, and the constraints of programming for 8-bit retro hardware with limited memory and processing power.",
+      "tags": [
+         "6502 Assembly",
+         "Homebrew",
+         "Nintendo Entertainment System",
+         "Assembly Language",
+         "Retro Programming",
+         "Interactive",
+         "Low-level Programming",
+         "Emulator Programming"
+      ],
+      "link": "https://github.com/knapeczadam/retro-console-and-emulator-programming-neslides"
+   },
+   {
+      "title": "NES Emulator (Early Development)",
+      "thumbnail": "nes.png",
+      "description": "Still in very early development. This will be a Nintendo Entertainment System (NES) emulator written in modern C++20 utilizing co-routines for cycle-accurate emulation. The scope of the project is to be determined. The focus now is on emualating only the CPU.",
+      "tags": [
+         "6502 Assembly",
+         "NES",
+         "Emulation",
+         "C++ 20",
+         "SDL3",
+         "ImGui"
+      ],
+      "link": "https://github.com/Froncu/NES"
+   },
+   {
+      "title": "Kidults",
+      "thumbnail": "kidults.png",
+      "description": "A charming 3D co-op balancing game built in Unreal Engine where two players must work together to sneak into a cinema disguised as an adult by stacking inside a shared trench coat. The core gameplay revolves around cooperative physics-based movement and balance mechanics—players must coordinate their actions to walk and behave convincingly \"normal\" without raising suspicions from NPCs, creating hilarious moments as they struggle to stay upright and avoid detection. The game embraces slapstick comedy and the classic \"two kids in a trench coat\" trope, requiring constant communication and synchronization between players. Currently in prototype stage with active development and a planned release. Created collaboratively with a diverse team bringing together programming, art, level design, and animation expertise.",
+      "tags": [
+         "Unreal Engine 5",
+         "3D",
+         "Co-op",
+         "Local Multiplayer",
+         "Physics-based",
+         "Balancing Game",
+         "Comedy",
+         "Slapstick",
+         "Gameplay Design",
+         "Team Project"
+      ],
+      "link": "https://froncu.itch.io/kidults"
+   }
+]

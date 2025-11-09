@@ -1,58 +1,98 @@
-const body = document.body;
+let projects = [];
 
-const btnTheme = document.querySelector(".fa-moon");
-const btnHamburger = document.querySelector(".fa-bars");
-
-const addThemeClass = (bodyClass, btnClass) => {
-   body.classList.add(bodyClass);
-   btnTheme.classList.add(btnClass);
-};
-
-const getBodyTheme = localStorage.getItem("portfolio-theme");
-const getBtnTheme = localStorage.getItem("portfolio-btn-theme");
-
-addThemeClass(getBodyTheme, getBtnTheme);
-
-const isDark = () => body.classList.contains("dark");
-
-const setTheme = (bodyClass, btnClass) => {
-   body.classList.remove(localStorage.getItem("portfolio-theme"));
-   btnTheme.classList.remove(localStorage.getItem("portfolio-btn-theme"));
-
-   addThemeClass(bodyClass, btnClass);
-
-   localStorage.setItem("portfolio-theme", bodyClass);
-   localStorage.setItem("portfolio-btn-theme", btnClass);
-};
-
-const toggleTheme = () => (isDark() ? setTheme("light", "fa-moon") : setTheme("dark", "fa-sun"));
-
-btnTheme.addEventListener("click", toggleTheme);
-
-const displayList = () => {
-   const navUl = document.querySelector(".nav__list");
-
-   if (btnHamburger.classList.contains("fa-bars")) {
-      btnHamburger.classList.remove("fa-bars");
-      btnHamburger.classList.add("fa-times");
-      navUl.classList.add("display-nav-list");
-   } else {
-      btnHamburger.classList.remove("fa-times");
-      btnHamburger.classList.add("fa-bars");
-      navUl.classList.remove("display-nav-list");
+// Fetch and render projects
+async function loadProjects() {
+   try {
+      const response = await fetch('projects.json');
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      projects = await response.json();
+      renderProjects();
+   } catch (error) {
+      console.error('Failed to load projects.json:', error);
    }
-};
+}
 
-btnHamburger.addEventListener("click", displayList);
+// Render projects grid
+function renderProjects() {
+   const grid = document.getElementById('projectsGrid');
+   grid.innerHTML = ''; // clear existing
 
-const scrollUp = () => {
-   const btnScrollTop = document.querySelector(".scroll-top");
+   projects.forEach((project, index) => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      card.onclick = () => openModal(index);
 
-   if (body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      btnScrollTop.style.display = "block";
+      const img = document.createElement('img');
+      img.src = project.thumbnail;
+      img.alt = project.title;
+
+      const overlay = document.createElement('div');
+      overlay.className = 'project-card-overlay';
+
+      const title = document.createElement('h3');
+      title.className = 'project-card-title';
+      title.textContent = project.title;
+
+      overlay.appendChild(title);
+      card.appendChild(img);
+      card.appendChild(overlay);
+      grid.appendChild(card);
+   });
+}
+
+// Open modal with project details
+function openModal(index) {
+   const project = projects[index];
+   const modal = document.getElementById('projectModal');
+
+   document.getElementById('modalImage').src = project.thumbnail;
+   document.getElementById('modalImage').alt = project.title;
+   document.getElementById('modalTitle').textContent = project.title;
+   document.getElementById('description').textContent = project.description;
+
+   const tagsContainer = document.getElementById('modalTags');
+   tagsContainer.innerHTML = '';
+   project.tags.forEach(tag => {
+      const tagElement = document.createElement('span');
+      tagElement.className = 'modal-tag';
+      tagElement.textContent = tag;
+      tagsContainer.appendChild(tagElement);
+   });
+
+   const link = document.getElementById('modalLink');
+
+   if (project.link) {
+      link.href = project.link;
+      link.style.display = 'flex';
    } else {
-      btnScrollTop.style.display = "none";
+      link.style.display = 'none';
    }
-};
 
-document.addEventListener("scroll", scrollUp);
+   modal.classList.add('active');
+   document.body.style.overflow = 'hidden';
+
+   setTimeout(() => modal.classList.add('visible'), 10);
+}
+
+// Close modal
+function closeModal() {
+   const modal = document.getElementById('projectModal');
+   modal.classList.remove('visible');
+
+   setTimeout(() => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+   }, 300);
+}
+
+// Event listeners
+document.getElementById('modalClose').onclick = closeModal;
+document.getElementById('projectModal').onclick = e => {
+   if (e.target.id === 'projectModal') closeModal();
+};
+document.addEventListener('keydown', e => {
+   if (e.key === 'Escape') closeModal();
+});
+
+// Initialize
+loadProjects();
