@@ -84,7 +84,7 @@
    {
       "title": "Kidults",
       "thumbnail": "kidults.png",
-      "description": "A charming 3D co-op balancing game built in Unreal Engine where two players must work together to sneak into a cinema disguised as an adult by stacking inside a shared trench coat. The core gameplay revolves around cooperative physics-based movement and balance mechanics—players must coordinate their actions to walk and behave convincingly \"normal\" without raising suspicions from NPCs, creating hilarious moments as they struggle to stay upright and avoid detection. The game embraces slapstick comedy and the classic \"two kids in a trench coat\" trope, requiring constant communication and synchronization between players. Currently in prototype stage with active development and a planned release. Created collaboratively with a diverse team bringing together programming, art, level design, and animation expertise.",
+      "description": "A charming 3D co-op balancing game built in Unreal Engine where two players must work together to sneak into a cinema disguised as an adult by stacking inside a shared trench coat. The core gameplay revolves around cooperative physics-based movement and balance mechanics—players must coordinate their actions to walk and behave convincingly \"normal\" without raising suspicions from NPCs, creating hilarious moments as they struggle to stay upright and avoid detection. The game embraces slapstick comedy and the classic \"two kids in a trench coat\" trope, requiring constant communication and synchronization between players. Created collaboratively with a diverse team bringing together programming, art, level design, and animation expertise. I was responsible for final optimisations as well as implementing the core gameplay mechanics, including the physics-based balancing system and player controls.",
       "tags": [
          "Unreal Engine 5",
          "3D",
@@ -98,5 +98,19 @@
          "Team Project"
       ],
       "link": "https://froncu.itch.io/kidults"
+   },
+   {
+      "title": "Just Keep Swimming",
+      "thumbnail": "just_keep_swimming.png",
+      "description": "Winner of the UNWRAP 2024 Game Jam! The game is a 2.5D platformer which features a small chonky pufferfish racing against time to seal a hole in the ocean floor causing the water level to drop. Players use a slingshot mechanic by dragging from the fish to propel it through underwater platforming challenges, including interactables like sticky pads, sea mines, sea urchins, and an anglerfish enemy that actively dashes towards the player. The game emphasizes fast-paced parkour. Key gameplay involves reaching the bottom of the ocean before it fully drains, managing momentum and timing in a dynamic underwater environment.",
+      "tags": [
+         "Unreal Engine 5",
+         "Game Jam Winner",
+         "2.5D",
+         "Platformer",
+         "Speedrun",
+         "Team Project"
+      ],
+      "link": "https://woutjaah.itch.io/just-keep-swimming"
    }
 ]
